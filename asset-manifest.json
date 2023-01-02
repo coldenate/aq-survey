@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/aq-survey/static/css/main.073c9b0a.css",
-    "main.js": "/aq-survey/static/js/main.d99a0cf5.js",
-    "static/js/787.f69abaa4.chunk.js": "/aq-survey/static/js/787.f69abaa4.chunk.js",
-    "static/media/logo.svg": "/aq-survey/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/aq-survey/static/css/main.2fe9e2f1.css",
+    "main.js": "/aq-survey/static/js/main.7694fc77.js",
     "index.html": "/aq-survey/index.html",
-    "main.073c9b0a.css.map": "/aq-survey/static/css/main.073c9b0a.css.map",
-    "main.d99a0cf5.js.map": "/aq-survey/static/js/main.d99a0cf5.js.map",
-    "787.f69abaa4.chunk.js.map": "/aq-survey/static/js/787.f69abaa4.chunk.js.map"
+    "main.2fe9e2f1.css.map": "/aq-survey/static/css/main.2fe9e2f1.css.map",
+    "main.7694fc77.js.map": "/aq-survey/static/js/main.7694fc77.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d99a0cf5.js"
+    "static/css/main.2fe9e2f1.css",
+    "static/js/main.7694fc77.js"
   ]
 }
