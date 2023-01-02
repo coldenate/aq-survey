@@ -50,12 +50,14 @@ function App() {
 		var requestOptions = {
 			method: "POST",
 			headers: myHeaders,
-			mode: "no-cors",
 			body: raw,
 			redirect: "follow",
 		};
 
-		fetch("https://measure.up.railway.app/responses/create/", requestOptions)
+		fetch(
+			"https://measure.up.railway.app/responses/create/",
+			requestOptions
+		)
 			.then((response) => response.text())
 			.then((result) => console.log(result))
 			.catch((error) => console.log("error", error));
