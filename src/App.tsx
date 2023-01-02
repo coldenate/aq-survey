@@ -54,7 +54,7 @@ function App() {
 			redirect: "follow",
 		};
 
-		fetch("http://localhost:8000/responses/create", requestOptions) 
+		fetch("https://measure.up.railway.app/responses/create", requestOptions)
 			.then((response) => response.text())
 			.then((result) => console.log(result))
 			.catch((error) => console.log("error", error));
