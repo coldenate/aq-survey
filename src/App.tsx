@@ -50,6 +50,7 @@ function App() {
 		var requestOptions = {
 			method: "POST",
 			headers: myHeaders,
+			mode: "no-cors"
 			body: raw,
 			redirect: "follow",
 		};
