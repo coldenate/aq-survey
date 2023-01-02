@@ -1,0 +1,287 @@
+{
+	"title": "Air Quality Survey Form",
+	"description": "Thank you for participating in this survey! Your contribution is greatly appreciated. ",
+	"logoPosition": "right",
+	"completedHtml": "<h3>Thank you for completing the survey! I am so so so grateful for your contribution. </h3>",
+	"completedHtmlOnCondition": [{}],
+	"pages": [
+		{
+			"name": "consent",
+			"elements": [
+				{
+					"type": "radiogroup",
+					"name": "consent_question",
+					"title": "Do you accept the terms and conditions?",
+					"isRequired": true,
+					"validators": [
+						{
+							"type": "expression",
+							"text": "You have ownership of your data. The survey will close and your information will not be given out by this project in any form. ",
+							"expression": "{consent_question} != 'False'"
+						}
+					],
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				}
+			],
+			"title": "User Data Consent Agreement",
+			"description": "nothing scary! I promise! This is just permission for your responses to be used in the reports and data analysis of this project."
+		},
+		{
+			"name": "student_info",
+			"elements": [
+				{
+					"type": "text",
+					"name": "email_address",
+					"title": "Email",
+					"inputType": "email",
+					"autocomplete": "email",
+					"placeholder": "Your email here. Student email is encouraged!"
+				},
+				{
+					"type": "dropdown",
+					"name": "room_num",
+					"title": "Room Number",
+					"description": "Please select the room you spent the majority of your class-time in.",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "216",
+							"text": "Sra. Vazquez's Room (216)"
+						},
+						{
+							"value": "217",
+							"text": "Mrs. Tysinger's Room (217)"
+						},
+						{
+							"value": "218",
+							"text": "Mrs. McLain's Room (218)"
+						},
+						{
+							"value": "240",
+							"text": "Mrs. Younts's Room (240)"
+						},
+						{
+							"value": "241",
+							"text": "Mr Parish's Room (241)"
+						},
+						{
+							"value": "243",
+							"text": "Dr. James's Room (243)"
+						}
+					]
+				}
+			],
+			"visible": false,
+			"visibleIf": "{consent_question} = 'True'",
+			"title": "Student Information",
+			"description": "If you provide an email, I will send you a personalized report before the end of the year of how your brain functioned in different indoor air environments! If enough people sign-up, I will see if I could leave the air measurements in all year. "
+		},
+		{
+			"name": "page1",
+			"elements": [
+				{
+					"type": "rating",
+					"name": "fatigue",
+					"title": "During class, or during testing, were you feeling tired or fatigued?",
+					"isRequired": true,
+					"rateMax": 10,
+					"minRateDescription": "No fatigue or tiredness",
+					"maxRateDescription": "Very fatigued and tired (fell asleep during class)",
+					"displayRateDescriptionsAsExtremeItems": true
+				},
+				{
+					"type": "radiogroup",
+					"name": "distractions",
+					"title": "Were there any major distractions or interruptions during class or testing?",
+					"description": "If you weren't gobsmacked and utterly driven to derail from class, feel free to select \"No\" :)",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				},
+				{
+					"type": "radiogroup",
+					"name": "meds",
+					"title": "Are there any medications that would have affected your brain's function during class?",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				},
+				{
+					"type": "radiogroup",
+					"name": "subtances",
+					"title": "Did you consume any substances (such as caffeine or alcohol) that may have impacted your brain's function during the experiment?",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				},
+				{
+					"type": "radiogroup",
+					"name": "discomfort",
+					"title": "Were you experiencing any physical or emotional discomfort that may have affected your brain's function during class?",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				},
+				{
+					"type": "radiogroup",
+					"name": "sleep",
+					"title": "Did you get enough sleep last night?",
+					"description": "6-8 hours is a good range to call \"enough\" sleep. I myself, can barely catch a 9.",
+					"isRequired": true,
+					"choices": [
+						{
+							"value": "True",
+							"text": "Yes"
+						},
+						{
+							"value": "False",
+							"text": "No"
+						}
+					]
+				}
+			],
+			"visibleIf": "{room_num} notempty",
+			"title": "Examination",
+			"description": "There's games at the end! :)",
+			"navigationButtonsVisibility": "show"
+		},
+		{
+			"name": "reaction_time",
+			"elements": [
+				{
+					"type": "html",
+					"name": "question1",
+					"visibleIf": "{reaction_time_ms} empty",
+					"width": "100%",
+					"minWidth": "100",
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/reactiontime\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 70vw;\n\t\theight: 100vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+				},
+				{
+					"type": "text",
+					"name": "reaction_time_ms",
+					"title": "Complete the test above until you get your average reaction time.",
+					"description": "(This is when the screen has the buttons: \"save score\" and \"try again\")",
+					"isRequired": true,
+					"inputType": "number"
+				}
+			],
+			"visibleIf": "{sleep} notempty",
+			"title": "Reaction Time",
+			"description": "This is the true data collection, so please follow the instructions carefully! Thank you for participating. "
+		},
+		{
+			"name": "page2",
+			"elements": [
+				{
+					"type": "html",
+					"name": "Please take a visual memory test.",
+					"visibleIf": "{reaction_time_ms} notempty",
+					"width": "100%",
+					"minWidth": "100",
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/memory\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+				},
+				{
+					"type": "text",
+					"name": "visual_mem_level",
+					"title": "Complete the test above until you get your visual memory score level.",
+					"description": "(This is when the screen has the buttons: \"save score\" and \"try again\")",
+					"isRequired": true,
+					"inputType": "number"
+				}
+			],
+			"visibleIf": "{reaction_time_ms} notempty",
+			"title": "Visual Memory Test",
+			"description": "You may want to max out at level 10 for time purposes."
+		},
+		{
+			"name": "page3",
+			"elements": [
+				{
+					"type": "html",
+					"name": "question2",
+					"visibleIf": "{aiming_reaction_ms} empty",
+					"width": "100%",
+					"minWidth": "100",
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/aim\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+				},
+				{
+					"type": "text",
+					"name": "aiming_reaction_ms",
+					"title": "Complete the test above until you get your aiming reaction time.",
+					"description": "(This is when the screen has the buttons: \"save score\" and \"try again\")",
+					"isRequired": true,
+					"inputType": "number"
+				}
+			],
+			"visibleIf": "{visual_mem_level} notempty"
+		},
+		{
+			"name": "page4",
+			"elements": [
+				{
+					"type": "html",
+					"name": "random_chimp_event!!!_whaaaa",
+					"visibleIf": "{chimp_score} empty",
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/chimp\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+				},
+				{
+					"type": "text",
+					"name": "chimp_score",
+					"title": "Complete the test above until you get your chimp number score.",
+					"description": "(Take your time, but don't let this take up too much time. Beat the chimpanzee's score and get above 9!)",
+					"isRequired": true,
+					"inputType": "number"
+				}
+			],
+			"visibleIf": "{aiming_reaction_ms} notempty",
+			"title": "Just one more!"
+		}
+	],
+	"showProgressBar": "top",
+	"questionsOnPageMode": "singlePage",
+	"showPreviewBeforeComplete": "showAnsweredQuestions",
+	"maxTimeToFinish": 900,
+	"showTimerPanel": "top",
+	"showTimerPanelMode": "survey"
+}
