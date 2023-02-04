@@ -1,8 +1,8 @@
 {
-	"title": "Air Quality Survey Form",
+	"title": "Survey Form - HCA Bio Honors Project 2023",
 	"description": "Thank you for participating in this survey! Your contribution is greatly appreciated. ",
 	"logoPosition": "right",
-	"completedHtml": "<h3>Thank you for completing the survey! I am so so so grateful for your contribution. </h3>",
+	"completedHtml": "<h3>Thank you for completing the survey! I am so so so grateful for your contribution. Remember to check back in each end of a block, and use the same email address!\nCheers!</h3>",
 	"completedHtmlOnCondition": [{}],
 	"pages": [
 		{
@@ -83,7 +83,7 @@
 			"visible": false,
 			"visibleIf": "{consent_question} = 'True'",
 			"title": "Student Information",
-			"description": "If you provide an email, I will send you a personalized report before the end of the year of how your brain functioned in different indoor air environments! If enough people sign-up, I will see if I could leave the air measurements in all year. "
+			"description": "If you provide an email, I will send you a personalized report before the end of the year of how your data worked! (A lot like Spotify Wrapped) If enough people sign-up, I will see if I could leave the study in all year. Of course, with wayy less surveys so they don't get too tedious."
 		},
 		{
 			"name": "page1",
@@ -133,8 +133,8 @@
 				},
 				{
 					"type": "radiogroup",
-					"name": "subtances",
-					"title": "Did you consume any substances (such as caffeine or alcohol) that may have impacted your brain's function during the experiment?",
+					"name": "subs",
+					"title": "Have you taken any substances (such as caffeine or alcohol) that may have impacted your body during class?",
 					"isRequired": true,
 					"choices": [
 						{
@@ -150,7 +150,7 @@
 				{
 					"type": "radiogroup",
 					"name": "discomfort",
-					"title": "Were you experiencing any physical or emotional discomfort that may have affected your brain's function during class?",
+					"title": "Were you experiencing any physical or emotional discomfort that may have affected your ability to concentrate or mental state in class?",
 					"isRequired": true,
 					"choices": [
 						{
@@ -167,7 +167,7 @@
 					"type": "radiogroup",
 					"name": "sleep",
 					"title": "Did you get enough sleep last night?",
-					"description": "6-8 hours is a good range to call \"enough\" sleep. I myself, can barely catch a 9.",
+					"description": "6-8 hours is a good range to call \"enough\" sleep. I myself, can barely catch a 7. In case you are unaware of your hours, here is an easy test: ~2 hours after you woke up, did you feel refreshed, or did you feel fatigued? refreshed = yes; fatigued = no. ",
 					"isRequired": true,
 					"choices": [
 						{
@@ -207,8 +207,8 @@
 				}
 			],
 			"visibleIf": "{sleep} notempty",
-			"title": "Reaction Time",
-			"description": "This is the true data collection, so please follow the instructions carefully! Thank you for participating. "
+			"title": "Reaction Time | PLEASE READ BELOW THIS",
+			"description": "IF THERE IS ISSUES WITH \"ADBLOCKER\", FIND THE TEXT \"CONTINUE WITHOUT DISABLING\"; click it. :)\nThis is the true data collection, so please follow the instructions carefully! Thank you for participating.\nIf at any point you need to reenter an answer, delete all text fully, then click outside the box and wait for the game to return."
 		},
 		{
 			"name": "page2",
