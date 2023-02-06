@@ -91,6 +91,7 @@
 				{
 					"type": "rating",
 					"name": "fatigue",
+					"description": "No fatigue or tiredness: 1 - 10: Very fatigued and tired (fell asleep during class)",
 					"title": "During class, or during testing, were you feeling tired or fatigued?",
 					"isRequired": true,
 					"rateMax": 10,
