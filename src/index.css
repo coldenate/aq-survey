@@ -6,6 +6,9 @@ body {
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	/* line-height: 2.5; */
+	/* transform: scale(0.85);
+	transform-origin: 0 0; */
 }
 
 code {

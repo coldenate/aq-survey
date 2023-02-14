@@ -33,7 +33,7 @@
 				}
 			],
 			"title": "User Data Consent Agreement",
-			"description": "nothing scary! I promise! This is just permission for your responses to be used in the reports and data analysis of this project."
+			"description": "Nothing scary! I promise! This is just permission for your responses to be used in the reports and data analysis of this project."
 		},
 		{
 			"name": "student_info",
@@ -91,8 +91,8 @@
 				{
 					"type": "rating",
 					"name": "fatigue",
-					"description": "No fatigue or tiredness: 1 - 10: Very fatigued and tired (fell asleep during class)",
 					"title": "During class, or during testing, were you feeling tired or fatigued?",
+					"description": "No fatigue or tiredness: 1 - 10: Very fatigued and tired (fell asleep during class)",
 					"isRequired": true,
 					"rateMax": 10,
 					"minRateDescription": "No fatigue or tiredness",
@@ -196,7 +196,7 @@
 					"visibleIf": "{reaction_time_ms} empty",
 					"width": "100%",
 					"minWidth": "100",
-					"html": "<iframe src=\"https://humanbenchmark.com/tests/reactiontime\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 70vw;\n\t\theight: 100vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/reactiontime\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 100%;\n\t\theight: 100vw;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
 				},
 				{
 					"type": "text",
@@ -217,10 +217,10 @@
 				{
 					"type": "html",
 					"name": "Please take a visual memory test.",
-					"visibleIf": "{reaction_time_ms} notempty",
+					"visibleIf": "{visual_mem_level} empty",
 					"width": "100%",
 					"minWidth": "100",
-					"html": "<iframe src=\"https://humanbenchmark.com/tests/memory\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/memory\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 100%;\n\t\theight: 100vw;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
 				},
 				{
 					"type": "text",
@@ -244,7 +244,7 @@
 					"visibleIf": "{aiming_reaction_ms} empty",
 					"width": "100%",
 					"minWidth": "100",
-					"html": "<iframe src=\"https://humanbenchmark.com/tests/aim\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/aim\"></iframe> <style> \n/* make the size of the page 1080 by 1280 */\n/* make all iframes take up the whole screen without using percentages*/\n iframe {\n     width: 90%;\n     height: 100vw;\n}\n/* remove the border */\n iframe {\n     border: none;\n}\n/* remove the scrollbars */\n iframe {\n     overflow: hidden;\n}\n/* remove the padding */\n iframe {\n     padding: 0;\n}\n/* remove the margin */\n iframe {\n     margin: 0;\n}\n/* remove the background */\n iframe {\n     background: transparent;\n}\n iframe {\n     zoom: 40%;\n\n}\n </style> "
 				},
 				{
 					"type": "text",
@@ -264,7 +264,7 @@
 					"type": "html",
 					"name": "random_chimp_event!!!_whaaaa",
 					"visibleIf": "{chimp_score} empty",
-					"html": "<iframe src=\"https://humanbenchmark.com/tests/chimp\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 56vw;\n\t\theight: 60vh;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
+					"html": "<iframe src=\"https://humanbenchmark.com/tests/chimp\"></iframe>\n<style>\n\t/* make the size of the page 1080 by 1280 */\n\n\t/* make all iframes take up the whole screen without using percentages*/\n\tiframe {\n\t\twidth: 100%;\n\t\theight: 100vw;\n\t}\n\t/* remove the border */\n\tiframe {\n\t\tborder: none;\n\t}\n\t/* remove the scrollbars */\n\tiframe {\n\t\toverflow: hidden;\n\t}\n\t/* remove the padding */\n\tiframe {\n\t\tpadding: 0;\n\t}\n\t/* remove the margin */\n\tiframe {\n\t\tmargin: 0;\n\t}\n\t/* remove the background */\n\tiframe {\n\t\tbackground: transparent;\n\t}\n</style>\n"
 				},
 				{
 					"type": "text",
