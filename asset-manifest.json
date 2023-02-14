@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/aq-survey/static/css/main.2fe9e2f1.css",
-    "main.js": "/aq-survey/static/js/main.e299d496.js",
+    "main.js": "/aq-survey/static/js/main.5f56deb9.js",
     "index.html": "/aq-survey/index.html",
     "main.2fe9e2f1.css.map": "/aq-survey/static/css/main.2fe9e2f1.css.map",
-    "main.e299d496.js.map": "/aq-survey/static/js/main.e299d496.js.map"
+    "main.5f56deb9.js.map": "/aq-survey/static/js/main.5f56deb9.js.map"
   },
   "entrypoints": [
     "static/css/main.2fe9e2f1.css",
-    "static/js/main.e299d496.js"
+    "static/js/main.5f56deb9.js"
   ]
 }
